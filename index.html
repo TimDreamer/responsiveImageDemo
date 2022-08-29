@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Responsive Images</title>
+</head>
+
+<body>
+  <div>
+    <h1>Density</h1>
+    <img src="./cat1/cat-500.jpeg" srcset="./cat1/cat-500.jpeg, ./cat1/cat-1000.jpeg 2x, ./cat1/cat-1500.jpeg 3x"
+      alt="cat">
+  </div>
+  <div>
+    <h1>Physical pixels</h1>
+    <img src="./cat1/cat-500.jpeg"
+      srcset="./cat1/cat-500.jpeg 500w, ./cat1/cat-1000.jpeg 1000w, ./cat1/cat-1500.jpeg 1500w" alt="cat">
+  </div>
+  <div>
+    <h1>Picture</h1>
+    <picture>
+      <source media="(max-width: 960px)"
+        srcset="./cat1/cat-500.jpeg 500w, ./cat1/cat-1000.jpeg 1000w, ./cat1/cat-1500.jpeg 1500w" />
+      <source srcset="./cat2/small.jpeg 500w, ./cat2/medium.jpeg 1000w, ./cat2/large.jpeg 1500w" />
+      <img class="picture-img" src="./cat1/cat-500.jpeg" />
+    </picture>
+  </div>
+</body>
+
+</html>
