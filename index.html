@@ -11,20 +11,17 @@
 
 <body>
   <div>
-    <h1>Density</h1>
-    <img src="./cat1/cat-500.jpeg" srcset="./cat1/cat-500.jpeg, ./cat1/cat-1000.jpeg 2x, ./cat1/cat-1500.jpeg 3x"
-      alt="cat">
+    <h1>&lt;img&gt; Density 1x 2x</h1>
+    <img src="./cat1/cat-500.jpeg" srcset="./cat1/cat-500.jpeg 1x, ./cat1/cat-1000.jpeg 2x" alt="cat">
   </div>
   <div>
-    <h1>Physical pixels</h1>
-    <img src="./cat1/cat-500.jpeg"
-      srcset="./cat1/cat-500.jpeg 500w, ./cat1/cat-1000.jpeg 1000w, ./cat1/cat-1500.jpeg 1500w" alt="cat">
+    <h1>&lt;img&gt; 500w, 1000w</h1>
+    <img src="./cat1/cat-500.jpeg" srcset="./cat1/cat-500.jpeg 500w, ./cat1/cat-1000.jpeg 1000w" alt="cat">
   </div>
   <div>
-    <h1>Picture</h1>
+    <h1>&lt;picture&gt; (max-width: 960px) </h1>
     <picture>
-      <source media="(max-width: 960px)"
-        srcset="./cat1/cat-500.jpeg 500w, ./cat1/cat-1000.jpeg 1000w, ./cat1/cat-1500.jpeg 1500w" />
+      <source media="(max-width: 960px)" srcset="./cat1/cat-500.jpeg 500w, ./cat1/cat-1000.jpeg 1000w" />
       <source srcset="./cat2/small.jpeg 500w, ./cat2/medium.jpeg 1000w, ./cat2/large.jpeg 1500w" />
       <img class="picture-img" src="./cat1/cat-500.jpeg" />
     </picture>
